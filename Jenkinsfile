@@ -18,5 +18,12 @@ pipeline {
                 sh "./Test.py"
             }
         }
+        stage('Deploy'){
+            steps{
+                sh "chmod u+x a.c"
+                sh "gcc a.c"
+                sh "./a.out"
+            }
+        }
     } 
 }
